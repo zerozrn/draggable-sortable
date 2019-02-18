@@ -1,0 +1,306 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    background: #f2f2f2;
+    font: 14px/1.5 "Consolas", "黑体"; 
+    color: #333;
+}
+
+input,textarea,select,button{
+    outline: 0;
+    border: 0;
+    background: transparent;
+}
+
+a{
+    color: #666;
+}
+
+.container{
+    width: 80%;
+    padding: 30px;
+    margin: 50px auto;
+    background: #fff;
+}
+
+.container h2{
+    margin-bottom: 60px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.mainbox{
+    overflow: hidden;
+}
+
+.l-field{
+    width: 30%;
+    padding-right: 25px;
+    float: left;
+    border-right: 2px dashed #efefef;
+}
+
+.r-form{
+    width: 70%;
+    padding-left: 20px;
+    float: right;
+}
+
+.field-title{
+    margin-bottom: 15px;
+}
+
+.base-field{
+    margin-left: -5px;
+    margin-bottom: 20px;
+    font-size: 0;
+}
+
+.base-field li{
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+/* draggable助手helper设置了过渡属性(比如transition)时会导致不实时跟随鼠标移动 */
+.base-field li,
+body > .ui-draggable-dragging,
+.short-li.ui-sortable-helper{
+    width: 85px !important;
+    margin: 5px;
+    display: inline-block;
+    font-size: 14px;
+    height: 30px !important;
+    line-height: 30px;
+    text-align: center;
+    background-color: #ecf1f4;
+    cursor: move;
+}
+
+body > .long-li.ui-draggable-dragging,
+.formbox .long-li.ui-sortable-helper{
+    width: 200px !important;
+    padding: 0 15px;
+    text-align: left;
+}
+
+.base-field li:hover{
+    background: #ffa300;
+    color: #fff;
+}
+
+/* .base-field li:nth-child(3n){
+    margin-right: 0;
+} */
+
+.custom-field li{
+    padding: 0 15px;
+    margin-bottom: 15px;
+    height: 34px;
+    line-height: 34px;
+    background: #ecf1f4;
+    border: 1px solid #ecf1f4;
+    cursor: move;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+.custom-field li:hover{
+    background: #fff;
+    border-color: #ffa300;
+    -webkit-box-shadow: 0 0 10px #ffa300;
+    -moz-box-shadow: 0 0 10px #ffa300;
+    box-shadow: 0 0 10px #ffa300;
+}
+
+.custom-field li i{
+    margin-right: 5px;
+    color: #666;
+}
+
+.custom-field li img,
+body > .long-li.ui-draggable-dragging img,
+.formbox .long-li.ui-sortable-helper img{
+    float: right;
+    margin-top: 5px;
+    width: 24px;
+    height: 24px;
+}
+
+.desc{
+    margin-bottom: 15px;
+    color: #999;
+}
+
+.formbox{
+    padding-top: 10px;
+    padding-right: 20px;
+    border-right: 2px dashed #efefef;
+}
+
+.layui-form{
+    min-height: 640px;
+}
+
+.layui-form-item{
+    padding: 8px;
+    margin-bottom: 0;
+}
+
+.layui-form-item:hover{
+    background: #f8f8f8;
+    cursor: move;
+}
+
+/* .form-item + .form-item{
+    margin-top: 15px;
+} */
+
+.layui-form-item > label.layui-form-label{
+    display: inline-block;
+    width: 90px;
+    float: none;
+    text-align: right;
+    padding: 0;
+    vertical-align: middle;
+}
+
+.layui-input-inline{
+    width: 60% !important;
+    float: none !important;
+}
+
+.layui-input-inline input[type="text"],
+.layui-input-inline input[type="number"],
+.layui-input-inline textarea,
+.layui-input-inline select{
+    width: 100%;
+    height: 30px;
+    padding-left: 10px;
+    border: 1px solid #ddd;
+}
+
+.layui-input-inline.distpicker {
+    font-size: 0;
+}
+
+.layui-input-inline.distpicker select{
+    width: 30%;
+    margin-right: 3.33%;
+    font-size: 14px;
+}
+
+.layui-input-inline textarea{
+    height: 80px;
+    resize: none;
+    padding: 10px;
+}
+
+.layui-input-inline > a{
+    display: inline-block;
+    width: 40px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    background: #efefef;
+    vertical-align: middle;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+.layui-input-inline > a:hover{
+    background: #ffa300;
+    color: #fff;
+}
+
+.layui-input-inline > a i{
+    margin-top: 3px;
+    font-size: 16px;
+}
+
+.layui-form-radio{
+    margin-top: 0;
+}
+
+.ui-sortable-box{
+    height: 56px;
+    border: 1px dashed #ddd;
+}
+
+.layui-form-item .layui-form-checkbox[lay-skin=primary]{
+    margin-top: 4px;
+}
+
+.img{
+    position: relative;
+    width: 120px;
+    height: 120px;
+    float: left;
+    margin-right: 10px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.preview-img{
+    display: none;
+}
+
+.preview-img img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.img-btn{
+    width: 120px;
+    height: 120px;
+    background: url("../imgs/plus.png") no-repeat center center;
+    background-size: 24px;
+    cursor: pointer;
+}
+
+.layui-form-mid{
+    float: none;
+    display: inline-block;
+    padding: 0 5px !important;
+    margin-left: -28px;
+    border-left: 1px solid #ddd;
+    background: #ecf1f4;
+    position: relative;
+    top: 1px;
+    line-height: 28px;
+}
+
+.layui-form-item .layui-input-inline.marr{
+    margin-right: 0;
+}
+
+#customField li[name=district].disable{
+    pointer-events: none;
+}
+
+.a-delete:hover{
+    color: #ffa300;
+}

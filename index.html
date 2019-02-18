@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>简单的拖拽实例--draggable+sortable</title>
+    <link rel="stylesheet" href="js/plug-ins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="js/plug-ins/layui/css/layui.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container" id="container">
+        <h2>填写信息</h2>
+        <div class="mainbox">
+            <div class="l-field">
+                <h4 class="field-title">基本信息字段</h4>
+                <ul class="base-field" id="fieldList">
+                    <li class="short-li" name="name">姓名</li>
+                    <li class="short-li" name="sex">性别</li>
+                    <li class="short-li" name="age">年龄</li>
+                    <li class="short-li" name="birthdate">出生日期</li>
+                    <li class="short-li" name="bodyWeight">体重</li>
+                    <li class="short-li" name="bodyHeight">身高</li>
+                    <li class="short-li" name="phone">联系电话</li>
+                    <li class="short-li" name="email">电子邮箱</li>
+                    <li class="short-li" name="nativePlace">籍贯</li>
+                    <li class="short-li" name="education">学历</li>
+                    <li class="short-li" name="graduateSchool">毕业学校</li>
+                    <li class="short-li" name="address">所在地</li>
+                </ul>
+                <h4 class="field-title">其他自定义字段</h4>
+                <ul class="custom-field" id="customField">
+                    <li class="long-li" name="text"><i class="fa fa-arrows"></i>单行文本框<img src="imgs/img-text.png"/></li>
+                    <li class="long-li" name="textarea"><i class="fa fa-arrows"></i>多行文本框<img src="imgs/img-textarea.png"/></li>
+                    <li class="long-li" name="select"><i class="fa fa-arrows"></i>下拉框<img src="imgs/img-select.png"/></li>
+                    <li class="long-li" name="radio"><i class="fa fa-arrows"></i>单选<img src="imgs/img-radio.png"/></li>
+                    <li class="long-li" name="checkbox"><i class="fa fa-arrows"></i>多选<img src="imgs/img-checkbox.png"/></li>
+                    <li class="long-li" name="number"><i class="fa fa-arrows"></i>数字<img src="imgs/img-number.png"/></li>
+                    <li class="long-li" name="upload"><i class="fa fa-arrows"></i>上传<img src="imgs/img-upload.png"/></li>
+                    <li class="long-li" name="district"><i class="fa fa-arrows"></i>地区<img src="imgs/img-address.png"/></li>
+                    <li class="long-li" name="customdate"><i class="fa fa-arrows"></i>日期<img src="imgs/img-date.png"/></li>
+                </ul>
+            </div>
+            <div class="r-form">
+                <p class="desc"><i class="fa fa-arrows"></i>拖拽左侧字段到此区域以便填写信息</p>
+                <div class="formbox">
+                    <div>
+                        <form class="layui-form" id="realformbox"></form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/plug-ins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="js/plug-ins/layui/layui.js"></script>
+    <!-- 省市区联动插件  -->
+    <script src="http://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
+    <script src="js/plug-ins/distpicker/distpicker.data.js"></script>
+    <script src="js/plug-ins/distpicker/distpicker.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
